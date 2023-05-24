@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevätvisa</title>
+  <!-- Bootstrap-style link-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/tanja.css">
+  <!-- font awesome link-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="content">
+
+    <header>
+      <h1 class="test-heading">Kevätvisa</h1><br>
+      <h3>Maantietovisa</h3>
+    </header>
+    
+     <!-- Bootstrap-navbar-->
+    <nav style="background-image: url(../images/world.png); background-size: cover;">
+      <div>
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.html">Etusivu</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+              aria-expanded="false">Tietovisat</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="sirpa.html">Kasvivisa</a></li>
+              <li><a class="dropdown-item" href="mariella.html">Eläinvisa</a></li>
+              <li><a class="dropdown-item" href="aino.html">Matikkavisa</a></li>
+              <li><a class="dropdown-item" href="tanja.html">Maantietovisa</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Tietoja</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- article with presentation text and image -->
+    
+    <article class="article">
+      <div class="texts">
+        <div id="aloitus">
+<p>Tervetuloa Maantietovisaan!</p><br>
+<p>Visassa on 5 monivalintakysymystä.</p><br>
+<p>Voit tehdä testin niin monesti kuin haluat.</p>
+<div><button class="btn" id="start" onclick="start()">Aloita></button></div>
+</div>
+<body>
+  <div class="row justify-content-md-center">
+    <div class="col-md-auto">
+  <div class="quiz input-group" id="question1" style="display: none">
+      <h4>Kysymys 1/5</h4>
+      <p>Mikä on Suomen entinen pääkaupunki?</p>
+      <input class="form-check-input mt-0" type="radio" name="q1" value="Helsinki">Helsinki<br>
+      <input class="form-check-input mt-0" type="radio" name="q1" value="Tampere">Tampere<br>
+      <input class="form-check-input mt-0" type="radio" name="q1" value="Turku">Turku<br>
+      <div><button id="tarkista1" onclick="checkAnswer(1)">Vastaa</button></div>
+    </div>
+  </div>
+</div>
+    
+    <div class="input-group" id="question2" style="display: none">
+      <h4>Kysymys 2/5</h4>
+      <p>Mikä on maailman suurin valtameri?</p>
+      <input class="form-check-input mt-0" type="radio" name="q2" value="Tyynimeri">Tyynimeri<br>
+      <input class="form-check-input mt-0" type="radio" name="q2" value="Atlantinvaltameri">Atlantin valtameri<br>
+      <input class="form-check-input mt-0" type="radio" name="q2" value="Intianvaltameri">Intian valtameri<br>
+      <div><button id="tarkista2" onclick="checkAnswer(2)">Vastaa</button></div>
+    </div>
+
+    <div class="quiz input-group" id="question3" style="display: none">
+      <h4>Kysymys 3/5</h4>
+      <p>Mikä maa on pinta-alaltaan suurin?</p>
+      <input class="form-check-input mt-0" type="radio" name="q3" value="Suomi">Suomi<br>
+      <input class="form-check-input mt-0" type="radio" name="q3" value="Ruotsi">Ruotsi<br>
+      <input class="form-check-input mt-0" type="radio" name="q3" value="Norja">Norja<br>
+      <div><button id="tarkista3" onclick="checkAnswer(3)">Vastaa</button></div>
+    </div>
+
+    <div class="quiz input-group" id="question4" style="display: none">
+      <h4>Kysymys 4/5</h4>
+      <p>Mikä seuraavista on tunnettu korkeasta Eiffel-tornistaan?</p>
+      <input class="form-check-input mt-0" type="radio" name="q4" value="Pariisi, Ranska">Pariisi, Ranska<br>
+      <input class="form-check-input mt-0" type="radio" name="q4" value="Lontoo, Iso-Britannia">Lontoo, Iso-Britannia<br>
+      <input class="form-check-input mt-0" type="radio" name="q4" value="Rooma, Italia">Rooma, Italia<br>
+      
+      <div><button id="tarkista4" onclick="checkAnswer(4)">Vastaa</button>
+      </div>
+      </div>
+
+    <div class="quiz input-group" id="question5" style="display: none">
+      <h4>Kysymys 5/5</h4>
+      <p>Kenen lippu tämä on?</p>
+      <img src="../images/ahvis.png" alt="lippu" class="lippu"> <!-- https://pixabay.com/fi/vectors/ahvenanmaan-saaret-lippu-kuvakkeet-1293692/ -->
+      <input class="form-check-input mt-0" type="radio" name="q5" value="Suomi">Suomi<br>
+      <input class="form-check-input mt-0" type="radio" name="q5" value="Ruotsi">Ruotsi<br>
+      <input class="form-check-input mt-0" type="radio" name="q5" value="Ahvenanmaa">Ahvenanmaa<br>
+
+      <div><button id="tarkista5" onclick="checkAnswer(5)">Vastaa</button>
+      </div>
+      </div>
+    
+    <div class="quiz input-group" id="result"></div>
+    <button id="nextButton" onclick="nextQuestion()" style="display: none;">Jatka</button>
+    <div id="end" style="display: none;">
+      <a href="../index.html" class="btn">Etusivulle</a>
+      <a href="tanja.html" class="btn">Uudelleen</a>
+      <i class="fa-solid fa-heart fa-spin fa-spin-reverse fa-2xl" style="color: black;"></i>
+    </div>
+    </article>
+    
+
+    <!-- footer with list of coders-->
+    <footer>
+      <div class="tekijat"> © Aino Niskasaari, Mariella Heikkilä, Sirpa Lehtimäki & Tanja Aaltio
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- bootstrap javascript link-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+    crossorigin="anonymous"></script>
+  <script src="../javascript/tanja.js"></script>
+
+</body>
+
+</html>
+

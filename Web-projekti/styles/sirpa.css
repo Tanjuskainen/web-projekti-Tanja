@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'NewFont';
+    src: url(DK\ Koerier.ttf) format('truetype');
+}
+.content {
+    font-family: Lora, serif; 
+    display: grid;
+    grid: 10px;
+    grid-template-areas:
+    "header header header header"
+    "nav nav nav nav"
+    "article article article article"
+    "article article article article"
+    "article article article article"
+    "article article article article"
+    "article article article article"
+    "article article article article"
+    "footer footer footer footer";
+    margin: 10px;
+    font-size: 1.5em;   
+}
+body {
+    background-color: #469e49;
+    color: rgb(26, 27, 24);
+}
+h1 {
+    margin: 0.1em;
+    color: rgb(35, 124, 27);
+    text-shadow: 0 0 0, -1px -1px 0 #ffca0a;
+    font-family: 'NewFont', sans-serif;
+    font-size: 4em;
+}
+header {
+    display: flex;
+    grid-row: 1/2;
+    grid-column: 1/5;
+    position: relative;
+    min-height: 180px;
+    background-image: linear-gradient(to top, #ade4e3, #09a4b6);
+} 
+header img {
+    width: 125px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+[class^="nav-link"] { 
+    color: rgb(40, 101, 18);
+    background-color: #ade4e3;
+    opacity: 0.8;
+}
+a:hover {
+    color: black; font-weight: bold;
+}
+nav {
+    grid-row: 2/3;
+    grid-column: 1/5;
+}
+h2{
+    text-align: center;
+    /*margin: 0.1em;*/
+    color: rgb(103, 130, 5);
+    text-shadow: 0 0 0, -1px -1px 0 #070606;
+    font-family: Ubuntu, sans-serif;
+    font-size: 2em;
+}
+article {
+    display: flex;
+    grid-row: 3/5;
+    grid-column: 1/5;
+    min-height: 500px;
+    width: justify;
+    position: relative;
+    /*justify-content: center*/
+    place-content: left;
+    /*align-content: left;*/  
+}
+.button{
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(255, 196, 0);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px rgb(167, 201, 74);
+    margin: 4px;
+}
+.button:active {
+    background-color: rgb(146, 197, 4);
+    box-shadow: 0 5px rgb(87, 132, 18);
+    transform: translateY(4px);
+}
+.texts {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+/*question-osio muokataan vielä oikeaan asuun*/
+.question {
+    height: 300px;
+    width: 230px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    display:inline-table;
+    text-align: center;
+    grid-column: 1/5;
+    grid-row: 4/5;
+    position: relative;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    border: solid 1px rgb(248, 203, 4); 
+    border-radius: 10px;
+    box-shadow:#70c9d3 0 6px 20px 0 ;
+}
+img{
+    border-radius: 10px;
+}
+footer {
+    display: flex;
+    grid-row: 5/6;
+    grid-column: 1/5;
+    min-height: 150px;
+    font-size: small;
+    color: #313938;
+    background-image: linear-gradient(to bottom, #ade4e3, #09a4b6);
+    position: relative;
+}
+.tekijat {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2px;
+}
+header, footer, article, nav {
+    border: 5px solid rgb(82, 108, 9);
+    background-color: #ade2e4;
+    margin: 5px;
+    border-radius: 20px;
+    text-align: justify;
+    padding: 10px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 1010px) {
+    .content {
+        font-size: 1.2em;
+    }
+
+    .flower {
+        display: none;
+    }
+    nav img {
+        display: hidden;
+    }
+    
+}
+
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 3em;
+    }
+    .img.fluid {
+        display: max-content;
+        position: left;
+    }
+    .content {
+        display: left;
+        position: left;
+    }
+    /*määrittele vielä tekstin ja aloitusbuttonin paikka responsiiviseksi*/
+}

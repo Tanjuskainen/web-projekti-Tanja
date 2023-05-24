@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'NewFont';
+    src: url(DK\ Koerier.ttf) format('truetype');
+}
+.content {
+    font-family: Lora, serif; 
+    display: grid;
+    grid: 10px;
+    grid-template-areas:
+    "header header header header"
+    "nav nav nav nav"
+    "article article article article"
+    "article article article article"
+    "footer footer footer footer";
+    margin: 10px;
+    font-size: 1.5em;
+}
+body {
+    background-color: #35806d;
+    color: rgb(26, 27, 24);
+}
+h1 {
+    margin: 0.1em;
+    color: lemonchiffon;
+    text-shadow: 0 0 0, -1px -1px 0 #ffffff;
+    font-family: 'NewFont', sans-serif;
+    font-size: 4em;
+}
+header {
+    display: flex;
+    grid-row: 1/2;
+    grid-column: 1/5;
+    position: relative;
+    min-height: 180px;
+    background-image: linear-gradient(to top, #bfe4a6, #033021);
+} 
+header img {
+    width: 125px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+[class^="nav-link"] { 
+    color: black;
+
+}
+a:hover {
+    color: black; font-weight: bold;
+}
+nav {
+    grid-row: 2/3;
+    grid-column: 1/5;
+}
+
+article {
+    display: flex;
+    grid-row: 3/5;
+    grid-column: 1/5;
+    min-height: 500px;
+    position: relative;
+    
+}
+article img {
+    height: 200px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+}
+.texts {
+    margin: 50px;
+    text-align: start;
+}
+footer {
+    display: flex;
+    grid-row: 5/6;
+    grid-column: 1/5;
+    min-height: 150px;
+    font-size: small;
+    color: #c9f0e9;
+    background-image: linear-gradient(to bottom, #bfe4a6, #033021);
+    position: relative;
+}
+.tekijat {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: lemonchiffon;
+    font-size: 1.2em;
+    padding: 2px;
+}
+[class^="fa-solid"] {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+
+header, footer, article, nav {
+    border: 4px solid rgb(100, 133, 11);
+    background-color: #bfe4a6;
+    margin: 5px;
+    border-radius: 20px;
+    text-align: justify;
+    padding: 10px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 1010px) {
+    .content {
+        font-size: 1.2em;
+    }
+    .flower {
+        display: none;
+    }
+    nav img {
+        display: hidden;
+    }
+    
+}
+
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 3em;
+    }
+    
+}
