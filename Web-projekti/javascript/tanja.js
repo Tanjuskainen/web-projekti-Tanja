@@ -71,7 +71,7 @@ function nextQuestion() {
 
         //muuten näytetään tulokset
     } else {
-        // Kaikki kysymykset käyty läpi, lopetus ja 
+        // Kaikki kysymykset käyty läpi, lopetus, pisteet ja tsemppiteksti
         let viesti;
         if (points > 0 && points < 3) {
             viesti = "Hyvä yritys, kertaa vielä vähän!";
@@ -85,9 +85,7 @@ function nextQuestion() {
         console.log(viesti);
         let endResults = document.getElementById('end');
         endResults.insertAdjacentHTML('beforebegin', '<h2>Pisteet: ' + points + '/5</h2><br><p>' + viesti + '</p><br>');
-        // tähän if-elif-else lauseke sen mukaan, paljonko pisteitä on tullut
         endResults.style.display = 'block';
 
-        // Vikalle sivulle accordion, jossa lisää tietoa? Tai jokaisen tuloksen kohdalle "vinkki" accordion, josta voi luntata?
     }
 }
